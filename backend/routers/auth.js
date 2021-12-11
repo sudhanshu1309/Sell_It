@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { body } = require("express-validator");
-const { signup, signout, signin } = require("../controllers/auth");
+const { signup, signout, signin, isSignedIn } = require("../controllers/auth");
 
 router.get("/signout", signout);
 
@@ -25,5 +25,6 @@ router.post(
     .withMessage("Password  doesn't meet the requirements(min 6 char)"),
   signup
 );
+
 
 module.exports = router;
