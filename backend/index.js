@@ -30,4 +30,5 @@ app.use(cookieParser());
 
 //My routes
 app.use("/api", authRoutes);
+app.use("/api", userRoutes);
 
