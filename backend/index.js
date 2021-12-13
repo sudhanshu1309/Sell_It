@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const authRoutes = require("./routers/auth");
+const userRoutes = require("./routers/user");
 const port = process.env.PORT;
 
 mongoose
