@@ -6,6 +6,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const authRoutes = require("./routers/auth");
 const userRoutes = require("./routers/user");
+const productRoutes = require("./routers/product");
 const port = process.env.PORT;
 
 mongoose
@@ -32,4 +33,5 @@ app.use(cookieParser());
 //My routes
 app.use("/api", authRoutes);
 app.use("/api", userRoutes);
+app.use("/api", productRoutes);
 
