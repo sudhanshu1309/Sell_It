@@ -15,4 +15,21 @@ exports.getProductById = (req, res, next, id) => {
 };
 
 
-//this is comment
+//delete controllers
+// exports.deleteProduct = (req, res) => {
+//   let product = req.product;
+//   product.deleteOne((err, deletedProduct) => {
+//     if (err) {
+//       return res.status(400).json({
+//         error: `Failed to delete ${deletedProduct}!`,
+//       });
+//     }
+//     res.json({
+//       message: `${deletedProduct} successfully deleted!`,
+//     });
+//   });
+// };
+
+// exports.updateProduct = (req, res, id) => {
+//   Product.findByIdAndUpdate(id, {}, )
+// }

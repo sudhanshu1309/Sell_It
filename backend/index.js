@@ -10,7 +10,7 @@ const productRoutes = require("./routers/product");
 const port = process.env.PORT;
 
 mongoose
-  .connect("mongodb://localhost:27017/sellit", {
+  .connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -34,4 +34,3 @@ app.use(cookieParser());
 app.use("/api", authRoutes);
 app.use("/api", userRoutes);
 app.use("/api", productRoutes);
-
